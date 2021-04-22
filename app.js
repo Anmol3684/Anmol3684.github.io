@@ -136,11 +136,14 @@ const searchText = document.querySelector("#txt-search").value
     const combined = searchResult.map((result) => generateRowHTML(result)).join('\n')
     console.log(list)
     list.innerHTML = combined
-    }else{
+    }
+    if(searchResult.length === 0)
+    {
       list.innerHTML = `No keyword found for ${searchText}`
     }
   }
 }
+
   
 function btnshowall()
 {
